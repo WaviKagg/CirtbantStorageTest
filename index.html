@@ -17,6 +17,17 @@
       <button onclick="startScan('remove')">Remove Item</button>
     </div>
     <input type="text" id="search" placeholder="Search..." />
+    <div class="manual-entry">
+      <input type="text" id="manualAddInput" placeholder="Enter item to add" />
+      <button onclick="manualAddItem()">Add Manually</button>
+      <input
+        type="text"
+        id="manualRemoveInput"
+        placeholder="Enter item to remove"
+      />
+      <button onclick="manualRemoveItem()">Remove Manually</button>
+    </div>
+
     <ul id="inventory"></ul>
     <div id="scanner" style="width: 300px"></div>
 
