@@ -59,3 +59,27 @@ function startScan(mode) {
       alert("Failed to access camera. Make sure to allow camera permissions.");
     });
 }
+
+function manualAddItem() {
+  const input = document.getElementById("manualAddInput");
+  const item = input.value.trim();
+  if (item) {
+    db.ref("inventory/" + item).set(true);
+    alert(`Added: ${item}`);
+    input.value = "";
+  } else {
+    alert("Please enter a valid item.");
+  }
+}
+
+function manualRemoveItem() {
+  const input = document.getElementById("manualRemoveInput");
+  const item = input.value.trim();
+  if (item) {
+    db.ref("inventory/" + item).remove();
+    alert(`Removed: ${item}`);
+    input.value = "";
+  } else {
+    alert("Please enter a valid item.");
+  }
+}
