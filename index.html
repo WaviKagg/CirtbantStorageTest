@@ -18,13 +18,18 @@
     </div>
     <input type="text" id="search" placeholder="Search..." />
     <div class="manual-entry">
-      <input type="text" id="manualAddInput" placeholder="Enter item to add" />
+      <h3>Add Item</h3>
+      <input type="text" id="addCode" placeholder="Product Code (e.g., ABCD)" />
+      <input type="number" id="addMeter" placeholder="Meter (e.g., 125)" />
       <button onclick="manualAddItem()">Add Manually</button>
+
+      <h3>Remove Item</h3>
       <input
         type="text"
-        id="manualRemoveInput"
-        placeholder="Enter item to remove"
+        id="removeCode"
+        placeholder="Product Code (e.g., ABCD)"
       />
+      <input type="number" id="removeMeter" placeholder="Meter (e.g., 125)" />
       <button onclick="manualRemoveItem()">Remove Manually</button>
     </div>
 
